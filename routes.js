@@ -40,8 +40,40 @@ function homePage(path, response) {
   fetchFile(path, response)
 } 
 
+function productsPage(path, response) {
+  myEmitter.emit('event', path, 'INFO', 'The products page was requested');
+  // go get content for the products page
+  // list of products
+  fetchFile(path, response)
+}
+
+function servicesPage(path, response) {
+  myEmitter.emit('event', path, 'INFO', 'The services page was requested');
+  // go get content for the services page
+  // list of services
+  fetchFile(path, response)
+}
+
+function contactPage(path, response) {
+  myEmitter.emit('event', path, 'INFO', 'The contact page was requested');
+  // go get content for the contact page
+  // contact form
+  fetchFile(path, response)
+}
+
+function careersPage(path, response) {
+  myEmitter.emit('event', path, 'INFO', 'The careers page was requested');
+  // go get content for the careers page
+  // list of careers
+  fetchFile(path, response)
+}
+
 module.exports = {
   indexPage,
   aboutPage,
   homePage,
+  productsPage,
+  servicesPage,
+  contactPage,
+  careersPage,  
 }

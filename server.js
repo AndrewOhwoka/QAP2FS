@@ -35,6 +35,12 @@ const server = http.createServer((request, response) => {
       route.servicesPage(path, response);
       myEmitter.emit('route', path);
       break;
+      case '/careers':
+      path += 'careers.html';
+      if(DEBUG) console.log(path);
+      route.careerPage(path, response);
+      myEmitter.emit('route', path);
+      break;
       case '/contact':
       path += 'contact.html';
       if(DEBUG) console.log(path);
