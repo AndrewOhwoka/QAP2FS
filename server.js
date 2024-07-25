@@ -5,7 +5,7 @@ const path = require('path');
 const route = require('./routes.js');
 const myEmitter = require('./logEvents.js');
 
-global.DEBUG = false;
+global.DEBUG = true;
 
 const server = http.createServer((request, response) => {
   if(DEBUG) console.log('Request Url:', request.url);
